@@ -17,6 +17,6 @@
     	$conn = openDatabaseConnection(); 
 	    $stmt = $conn->prepare("SELECT * FROM paarden");
 		$stmt->execute();
-		$stmt->fetchAll();
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 	}
